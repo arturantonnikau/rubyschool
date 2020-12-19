@@ -1,0 +1,11 @@
+<h1> Admin OK. Show Users </h1>
+
+<% unless @file.closed? %>
+  <% @file.each_line do |line| %>
+    <%= line %> <br />
+  <% end %>
+
+  <% @file.close %>
+<%end%>
+
+<p> <%= @fail_access %> </p>
